@@ -1,0 +1,22 @@
+Anotacoes da aula ( SQL)
+
+
+
+O dado é seu valor na forma primaria( gabriel,azul,28 anos) 
+nunca dado é uma informação
+informação é um conjunto de dados (gabriel gosta de azul e tem 28 anos)
+Formulario é um conjunto dados 
+modelar os dados é criar um modelo conceitual e depois transforma em logica e depois ir para o fisico(teste) 
+
+O que é banco de dados?
+É um conjunto dados persistentes , que vai perdurar ate o sistema existir , pode acontecer updates mas vai continuar ao longo do sistema , sendo um cenario de um sistema real 
+Banco de dados relacional esta organizado e estruturado em tabelas
+
+Meta dados é onde vai ficar os dados guardados em algum repositorio 
+
+Principais atoras do banco de dados 
+DBA (database administrator) = é o profissional de tecnologia da informação, responsavel por criar o banco de dados propriamente dito , implementar controles de acesso de banco 
+
+
+
+
