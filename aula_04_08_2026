@@ -17,6 +17,25 @@ Meta dados é onde vai ficar os dados guardados em algum repositorio
 Principais atoras do banco de dados 
 DBA (database administrator) = é o profissional de tecnologia da informação, responsavel por criar o banco de dados propriamente dito , implementar controles de acesso de banco 
 
+-------
+
+Conceito de SGBD
+É um sistema de software (coleção de programas) cuja finalidade geral é facilitar o armazenamento de informações e permitir que os usuários consultem e atualizem essas informações quando as solicitar. O sgbd permitirá o compartilhamento de banco de dados entre vários usuários e aplicações. Todas esses recursos são realizadas por meio da linguagem de consulta estruturada - SQL (structured Query Language).
+
+Principais componentes 
+DDL (Data Definition Language) – Linguagem de definição de dados. É usada pelo administrador e projetista de banco de dados. Ex: create table, drop table, alter table, create index, etc; 
+DML (Data Manipulation Laguage) – Linguagem de manipulação de dados. É usada pelo usuário para manipular o banco de dados. Ex: select, insert, delete e update; 
+DCL (Data Control Language) – Linguagem de controle de dados. É usada para controlar e implementar segurança no banco de dados. Grant e revoke; 
+DD (Data Dictionary) – Dicionário de dados. Local onde é armazenado a definição dos dados armazenados(metadados).
+
+DDL (DATA DEFINITION LANGUAGE): CREATE, ALTER, DROP
+DML (DATA MANIPULATION LANGUAGE): INSERT, DELETE, UPDATE
+DQL (DATA QUERY LANGUAGE): SELECT (alguns autores colocam dentro do DML)
+DTL (DATA TRANSACTION LANGUAGE): BEGIN TRANSACTION, COMMIT, ROLLBACK
+DCL (DATA CONTROL LANGUAGE): GRANT, REVOKE, DENY
+
+entidade é um conjunto de objetos que possuem as mesmas caracteristicas 
+chave primaria é o que identifica o objeto especifico (exemplo RGM para alunos da UDF)
 
 
 
