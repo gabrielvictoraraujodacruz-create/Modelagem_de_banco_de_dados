@@ -1,0 +1,82 @@
+AULA DE BANCO DE DADOS ANOTAÇOES
+ ""ENTIDADE""
+
+É UM CONJUNTO DE OBJETOS COM A MESMA CARACTERISTICAS 
+É SEMPRE UM SUBSTANTIVO 
+
+ entidade é um conjunto de instâncias com as mesmas características.
+
+Entidade 
+Explicação: É um objeto ou conceito do mundo real que você quer representar e sobre o qual deseja armazenar informações. 
+Pode ser algo físico (uma pessoa, um carro) ou conceitual (uma venda, um curso). 
+Uma entidade é um conjunto de instâncias que compartilham as mesmas características. No banco de dados, uma entidade é mapeada para uma tabela.
+
+* Exemplo 1 (Escola): ALUNO (representa cada estudante na escola)
+* Exemplo 2 (Clínica): MÉDICO (representa cada médico que atende na clínica)
+
+
+Atributos
+
+*   Explicação: São as características, propriedades ou dados que descrevem uma entidade. Cada atributo armazena um tipo específico de informação sobre a entidade. No banco de dados, os atributos são mapeados para as colunas de uma tabela.
+
+
+
+*   Exemplo 1 (Entidade ALUNO):
+    *   matricula (número único do aluno)
+    *   nome (nome completo do aluno)
+    *   data_nascimento (data de nascimento do aluno)
+    *   endereco (endereço do aluno)
+*   Exemplo 2 (Entidade MÉDICO):
+    *   crm (número de registro do médico no conselho)
+    *   nome (nome completo do médico)
+    *   especialidade (especialidade médica do profissional)
+    *   telefone (telefone de contato do médico)
+
+
+Relacionamento
+*   Explicação: É a conexão ou associação entre duas ou mais entidades. Ele descreve como as entidades interagem entre si. Os relacionamentos mostram como os dados de uma tabela se conectam com os dados de outra.
+
+
+*   Exemplo 1 (Escola):
+ *   ALUNO cursa DISCIPLINA
+   *   Explicação: Um aluno pode cursar várias disciplinas, e uma disciplina pode ser cursada por vários alunos. Este é um relacionamento "muitos para muitos".
+*   Exemplo 2 (Clínica):
+  *   MÉDICO atende PACIENTE
+   *   Explicação: Um médico pode atender muitos pacientes, mas um paciente é atendido por um único médico (neste contexto, para um agendamento específico). Este é um relacionamento "um para muitos".
+
+Resumindo:
+*   Você define as entidades (os "o quê").
+*   Para cada entidade, você define seus atributos (os "o que tem").
+*   E então, você define os relacionamentos entre as entidades (os "como se conectam")
+
+
+Cardenalidade 
+Cardinalidade define quantas vezes uma entidade pode se relacionar com outra dentro de um relacionamento no banco de dados.
+é um objeto que pode (cadinar.) interage com outro objeto 
+Principais tipos:
+
+1. Um para um (1:1):
+Cada registro de A se relaciona com, no máximo, um de B, e vice-versa.
+Exemplo: Uma pessoa tem um RG; cada RG pertence a uma pessoa.
+
+2. Um para muitos (1:N):
+Um registro de A pode se relacionar com vários de B, mas cada B se relaciona com apenas um A.
+Exemplo: Um cliente faz vários pedidos; cada pedido é de um único cliente.
+
+3. Muitos para muitos (N:M):
+Um registro de A pode se relacionar com vários de B, e um B pode se relacionar com vários de A.
+Exemplo: Alunos e disciplinas—um aluno cursa várias disciplinas, uma disciplina é feita por vários alunos.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
