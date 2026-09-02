@@ -1,0 +1,24 @@
+anotaçoes de aula 01/09/2026
+
+papel da chave estrangeira é identificar a chave primaria 
+
+banco de dados é um conjunto de dados persistente nos bancos de dados que se relacionam 
+
+
+quando no modelo conceitual a cardinalidade de N para N , o relacionamento vira uma tabela e as chaves primarias irao virar chaves estrangeira , virando assim 1 para 1 
+
+nao tem como implementar N para N 
+
+"quais sao os tipos de dados que um SQL suporta?"
+
+regra 3 :  1:1 
+
+quando no modelo conceitual a cardinalidade for 1:1 , tanto faz a chave primaria para se tornar uma chave estrangeira 
+
+
+
+
+
+
+
+
