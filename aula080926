@@ -1,0 +1,82 @@
+anotaçoes da aula 08/09/2026
+
+
+APLIQUE A ATE A TERCEIRA FORMA NORMLA
+NORMALIZAR UMA TABELA SERA QUEBRAR UMA TABELA EM DUAS 
+APLICAR UMA REGRA PARA CRIAR UM BANCO DE DADOS NORMAL
+
+
+TODO ATRIBUTO MULTIVALORADO SEMPRE VAI VIRAR UMA TABELA,
+
+
+3 regras:
+
+
+
+1FN
+
+PRIMEIRA FORMA NORMAL(1FN) = DIZ-SE QUE UMA TABELA ESTA NA PRIMEIRA FORMA NORMAL 
+, QUANDO ELA NAO CONTEM TABELAS ANINHADAS
+SOLUÇAO 1 
+CONSTRUIR UMA UNICA TABELA COM REDUNDANCIA DE DADOS 
+CRIA UMA TABELONA , MAS NAO RESOLVE POR COMPLETO
+
+SOLUÇAO 2 
+CONSTRUIR UMA TABELA PARA CADA ANINHADA
+CRIA-SE UMA TABELA REFERENTE A PROPRIA TABELA QUE ESTA SENDO NORMALIZADA E UMA TABELA PARA CADA
+TABELA ANINHADA.
+
+VAI QUERBRANDO AS TABELAS 
+Proj (CodProj, Tipo, Descriçao)
+ProjEmp (CodProj,CodEmp,Nome,Cat,Sal,Datalni,TempAI)
+// quebrou a tabela em outra *projemp*
+
+******1fn= nao aninhadas*****
+
+2FN
+segunda forma normal (2FN) = uma tabela encontra-se na segunda forma normal, quando, alem de estar na
+1FN, nao contem dependencias parciais
+
+DEPENDENCIA FUNCIONAL PARCIAL: 
+uma dependencia funcional parcial ocorre quando uma coluna depende apenas de parte de uma chave primaria 
+composta
+Proj (CodProj, tipo , descriçao)
+ProjEmp (CodProj,CodEmp, datainicial, tempai
+Emp(codEmp, nome,cat,sal)
+
+
+********2fn= nao depende funcional parcial****************
+
+
+
+
+
+3FN
+
+Terceira forma normal = uma tabela encontra-se na terceira forma normal,quando , alem de estar na 2FN,
+nao contem dependencias transitivas.
+
+dependencia transitiva =
+
+uma dependencia funcional transitiva ocorre quando uma coluna, alem de depender da chave primaria da tabela, 
+depende de outra coluna ou conjunto de colunas da tabela 
+
+
+3 FN
+Proj (CodProj, tipo , descriçao)
+ProjEmp (CodProj,CodEmp, datainicial, tempai
+Emp(codEmp, nome,cat)
+Cat(cat,sal)
+
+
+
+
+
+
+
+
+
+
+
+
+
