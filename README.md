@@ -10,10 +10,10 @@ Repo da matéria de Banco de Dados. Tem as minhas anotações de aula, do concei
 
 | Arquivo | O que é |
 |---|---|
-| [`aula_04_08_2026`](aula_04_08_2026) | Dado x informação, o que é banco de dados, modelo conceitual/lógico/físico |
-| [`aula_11_08_26`](aula_11_08_26) | Entidades, atributos e instâncias |
-| [`anotacoes_de_aula_01.09.2026`](anotacoes_de_aula_01.09.2026) | Chave estrangeira e as regras de cardinalidade (1:1, 1:N, N:N) |
-| [`aula080926`](aula080926) | Normalização: 1FN, 2FN e 3FN |
+| [`aula_04_08_2026.txt`](aula_04_08_2026.txt) | Dado x informação, o que é banco de dados, modelo conceitual/lógico/físico |
+| [`aula_11_08_2026.txt`](aula_11_08_2026.txt) | Entidades, atributos e instâncias |
+| [`aula_01_09_2026.txt`](aula_01_09_2026.txt) | Chave estrangeira e as regras de cardinalidade (1:1, 1:N, N:N) |
+| [`aula_08_09_2026.txt`](aula_08_09_2026.txt) | Normalização: 1FN, 2FN e 3FN |
 
 ## 🗺️ O que a matéria cobre
 
