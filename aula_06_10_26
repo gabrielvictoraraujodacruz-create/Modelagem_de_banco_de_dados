@@ -1,0 +1,203 @@
+CODIGOS EM MYSQL E ENTREGA DA ATIVADADE 
+
+atividade 
+DROP DATABASE IF EXISTS db_CarrodePalha;
+CREATE DATABASE db_CarrodePalha;
+USE db_CarrodePalha;
+
+CREATE TABLE tb_sedes (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(50) NOT NULL,
+endereco VARCHAR(80) NOT NULL,
+telefone VARCHAR(20) NOT NULL,
+nomeGerente VARCHAR(50) NOT NULL,
+multa DECIMAL(8,2) NOT NULL
+);
+
+CREATE TABLE tb_classesCarro (
+id INT NOT NULL AUTO_INCREMENT,
+nome VARCHAR(20) NOT NULL,
+valorDiaria DECIMAL(8,2) NOT NULL,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE tb_clientes (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(50) NOT NULL,
+cpf VARCHAR(14) NOT NULL,
+cnh VARCHAR(20) NOT NULL,
+validadeCnh DATE NOT NULL,
+categoriaCnh VARCHAR(3) NOT NULL
+);
+
+CREATE TABLE tb_carros (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+placa VARCHAR(10) NOT NULL,
+modelo VARCHAR(40) NOT NULL,
+ano VARCHAR(9) NOT NULL,
+cor VARCHAR(20) NOT NULL,
+quilometragem DECIMAL(10,2) NOT NULL,
+descricao VARCHAR(100) NOT NULL,
+situacao VARCHAR(30) NOT NULL,
+origemCarro INT NOT NULL,
+localizacaoCarro INT,
+classeCarro INT NOT NULL,
+FOREIGN KEY (origemCarro) REFERENCES tb_sedes (id),
+FOREIGN KEY (localizacaoCarro) REFERENCES tb_sedes (id),
+FOREIGN KEY (classeCarro) REFERENCES tb_classesCarro (id)
+);
+
+CREATE TABLE tb_reservas (
+numero INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+diarias INT NOT NULL,
+dataLocacao DATE NOT NULL,
+dataRetorno DATE,
+quilometrosRodados DECIMAL(10,2),
+multa DECIMAL(8,2),
+situacao VARCHAR(15) NOT NULL,
+total DECIMAL(10,2),
+carro_reserva INT NOT NULL,
+cliente_reserva INT NOT NULL,
+sedeLocacao INT NOT NULL,
+sedeDevolucao INT NOT NULL,
+FOREIGN KEY (carro_reserva) REFERENCES tb_carros (id),
+FOREIGN KEY (cliente_reserva) REFERENCES tb_clientes (id),
+FOREIGN KEY (sedeLocacao) REFERENCES tb_sedes (id),
+FOREIGN KEY (sedeDevolucao) REFERENCES tb_sedes (id)
+);
+SHOW TABLES;
+
+
+
+em sala de aula ************************
+
+
+DROP DATABASE db_clinica_flor;
+CREATE DATABASE db_clinica_flor;
+USE db_clinica_flor;
+CREATE TABLE tb_medico(
+crm INTEGER NOT NULL PRIMARY KEY,
+nomeM VARCHAR(100) NOT NULL
+);
+CREATE TABLE tb_paciente(
+ID INTEGER NOT NULL PRIMARY KEY,
+nomePAC VARCHAR(100) NOT NULL
+);
+CREATE TABLE tb_consulta(
+CRM INTEGER NOT NULL,
+ID INTEGER NOT NULL,
+data_consulta DATE,
+hora_consulta TIME,
+PRIMARY KEY(CRM,ID),
+FOREIGN KEY(CRM) references tb_medico(crm),
+FOREIGN KEY(ID) references tb_paciente(ID)
+);
+INSERT tb_medico VALUES (1010,'José Maria');
+INSERT tb_medico VALUES (1011,'Diego');
+INSERT tb_medico VALUES (1012,'Diogo');
+INSERT tb_medico VALUES (1013,'Paulo Cesar');
+INSERT tb_paciente VALUES (1,'Ana');
+INSERT tb_paciente VALUES (2,'Josyane');
+INSERT tb_paciente VALUES (3,'Maria');
+INSERT tb_paciente VALUES (4,'João');
+INSERT tb_paciente VALUES (5,'Pedro');
+
+SELECT *
+FROM tb_paciente
+ORDER BY nomePAC ASC;
+
+SELECT *
+FROM tb_medico
+ORDER BY nomeM ASC;
+
+SELECT nomeM
+FROM tb_medico
+WHERE crm=1010;
+
+
+SELECT * 
+FROM tb_medico
+WHERE nomeM='Diogo';
+
+
+SELECT nomeM
+FROM tb_medico
+WHERE nomeM LIKE 'D%';
+
+SELECT nomeM
+FROM tb_medico
+WHERE nomeM LIKE 'J%A';
+
+SELECT nomeM
+FROM tb_medico
+WHERE nomeM LIKE 'D%'
+ORDER BY nomeM;
+
+SELECT *
+FROM tb_paciente
+WHERE nomePAC LIKE '%A';
+
+/*1 QUESTAO SELECIONAR TODOS OS MEDICOS  */
+
+SELECT *
+FROM tb_medico;
+
+/*2 QUESTAO SELECIONAR TODOS OS MEDICOS*/
+
+SELECT *
+FROM tb_paciente;
+
+/*3 LISTE APENAS OS NOMES DOS PACIENTES EM ORDEM ALFABETICA*/
+
+SELECT nomePAC as ' NOME DOS PACIENTES', id as "identificador do paciente"
+FROM tb_paciente
+ORDER BY ID;
+
+/*4. ALTERE A TABELA PACIENTE ADICIONANDO OS ATRIBUTOS SEXO E TELEFONE*/
+
+ALTER TABLE tb_paciente ADD sexo ENUM ("F","M","O");
+ALTER TABLE tb_paciente ADD telefone VARCHAR(14);
+
+/*5 ATUALIZE OS NOVOS ATRIBUTOS*/
+
+UPDATE tb_paciente
+SET SEXO = "F"
+WHERE ID IN (1, 2, 3);
+
+UPDATE tb_paciente
+SET SEXO = "M"
+WHERE ID IN (4, 5);
+
+UPDATE tb_paciente
+SET telefone = "(61)9999-9999"
+WHERE ID = 1;
+
+UPDATE tb_paciente
+SET telefone = "(61)9999-9998"
+WHERE ID = 2;
+
+UPDATE tb_paciente
+SET telefone = "(61)9999-9997"
+WHERE ID = 3;
+
+UPDATE tb_paciente
+SET telefone = "(61)9999-9996"
+WHERE ID = 4;
+
+UPDATE tb_paciente
+SET telefone = "(61)9999-9995"
+WHERE ID = 5;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
