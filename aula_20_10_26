@@ -1,0 +1,140 @@
+anotaçoes de aula 20/10/2026
+
+Vamos criar a tabela jogadores ATP
+
+1) liste o nome e pnome dos jogadores brasileiros
+
+SELECT pnome,nome
+FROM jogadores
+WHERE pais = 'BRA'
+
+2) liste o nome dos jogadores com menos de 10 anos
+
+SELECT nome
+FROM jogadores
+WHERE (ano_p - ano_n) <10
+
+3) Liste todos os dados de jogadores por ordem de nome 
+
+SELECT * 
+FROM jogadores
+ORDER BY nome ASC
+
+4)Liste o nome dos jogadores e ano de nascimento eliminando repetiçoes 
+
+SELECT DISTINCT nome,ano_n
+FROM jogadores
+
+5)Liste o nome e ano de nascimento dos jogadores nascidos entre 1975 e 1981 
+
+SELECT nome,ano_n 
+FROM jogadores
+WHERE ano_n BETWEEN 1975 and 1981
+
+(tenho que declarar o ano_n como INT para usar BETWEEN)
+
+6)Liste o nome de todos os jogadoes que comecem com a letra K
+
+SELECT nome 
+FROM jogadores
+WHERE nome LIKE 'K%'
+
+7)Liste o nome dos jogadores cuja A seja a segunda e a penultima letra
+
+SELECT nome 
+FROM jogadores
+WHERE nome LIKE '_a%a_'
+
+****************************************************************************************************************************
+tb_funcionario 
+tb_departamento
+
+1)Liste nome e sobrenome ordenado por sobrenome
+
+SELECT primeironome,ultimonome
+FROM tb_funcionario
+WHERE ORDER BY ultimonome
+
+2)Liste todos os campos de funcionarios ordenados por cidade
+
+SELECT * 
+FROM tb_funcionarios
+ORDER BY cidade
+
+3)Liste os funcionarios que tem salario superior a R$ 1.000,00 ordenados pelo nome completo
+
+SELECT *
+FROM tb_funcionarios
+WHERE salario > R$ 1.000,00 
+ORDER BY priemironome, segundonome, ultimonome
+
+4)Liste a data de nascimento e o primeiro nome dos funcionarios ordenados do mais novo para o mais velho
+
+SELECT data_n,nome 
+FROM tb_funcionarios
+ORDER BY  data_n DESC,primeironome
+
+
+****************************************************************************************************************************
+
+NOVAS CONSTRAINT
+
+UNIQUE = requer que a coluna ou de um conjunto de colunas seja exclusivos
+
+CHECK =  especifica uma condiçao que deve ser verdadeira 
+
+sexo CHAR (1)  CHECK (sexo IN ('F','M'))
+
+
+*****************************************************************************************************************************
+
+1- informe cod e nome de todos os empregados ordenados alfabeticamente. Use o apelido matricula para a coluna cod.
+
+SELECT cod AS matricula, nome
+FROM empregado
+ORDER BY matricula;
+
+*************************************************************************************************************************
+tabela empregados
+
+1)Liste a media salarial dos empregados
+
+SELECT AVG (salario) AS (media_salarial)
+FROM empregados;
+
+2)liste o total de empregados
+
+SELECT COUNT (*) AS  (total_empregado)
+FROM empregados;
+
+3)liste o maior salario 
+
+SELECT MAX (salario) AS (salario_maximo)
+FROM empregados;
+
+4)Liste o total da folha de pagamento dos empregados
+
+SELECT SUM (salario) AS (folha_de_pagamento)
+FROM empregado;
+
+****************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
