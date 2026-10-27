@@ -1,0 +1,40 @@
+ANOTAÇOES DE AULA
+!) qual é a query que eu liste o nome do livro , o titulo do livro e seus respectivos autores
+
+
+SELECT livro.titulo, autor.nome
+FROM livro JOIN auto_livro
+ON livro.codlivro = autor_livro.codlivro
+JOIN AUTOR
+ON autor_livro.matricula = autor.matricula
+
+ou 
+
+SELECT livro.titulo, autor.nome
+FROM livro,autor_livro,autor
+WHERE livro.codlivro = autor_livro.codlivro
+AND autor_livro.matricula = autor.matricula 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
