@@ -15,7 +15,45 @@ FROM livro,autor_livro,autor
 WHERE livro.codlivro = autor_livro.codlivro
 AND autor_livro.matricula = autor.matricula 
 
+****************************************************************************************************
+FUNCOES
 
+DELIMITER $$
+CREATE FUNCTION obternomesclientes ()
+RETURNS VARCHAR(255)
+BEGIN
+    DECLARE nomes VARCHAR(255);
+    SELECT GROUP_CONCAT ( nome SEPARATOR ',') INTO nomes FROM clientes;
+    RETURN nomes;
+END $$
+DELIMITER;
+
+CHAMADA A FUNÇAO 
+SELECT obternomesclientes ();
+
+***************************************************************************************************
+
+STORED PROCEDURE
+
+DELIMITER $$
+CREATE PROCEDURE InserirCliente(
+    IN p_nome VARCHAR(255),
+    IN p_email VARCHAR(255),
+    IN p_telefone VARCHAR(20)
+)
+BEGIN
+    INSERT INTO clientes (nome,email,telefone)
+    VALUES (p_nome, p_email, p_telefone);
+END $$
+DELIMITER;
+
+CHAMADA DO PROCEDIMENTO 
+
+CALL InserirCliente ( 'gabriel', 'gabriel@gmail.com', '(61)99999-9999')
+
+**********************************************************************************************
+
+    
 
 
 
