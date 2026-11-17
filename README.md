@@ -14,6 +14,7 @@ Repo da matéria de Banco de Dados. Tem as minhas anotações de aula, do concei
 | [`aula_11_08_2026.txt`](aula_11_08_2026.txt) | Entidades, atributos e instâncias |
 | [`aula_01_09_2026.txt`](aula_01_09_2026.txt) | Chave estrangeira e as regras de cardinalidade (1:1, 1:N, N:N) |
 | [`aula_08_09_2026.txt`](aula_08_09_2026.txt) | Normalização: 1FN, 2FN e 3FN |
+| [`revisao_40_questoes_gabarito.md`](revisao_40_questoes_gabarito.md) | Revisão da prova: 30 questões de SQL/ACID com explicação e 10 desafios resolvidos (MySQL) |
 
 ## 🗺️ O que a matéria cobre
 
